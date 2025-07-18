@@ -10,6 +10,8 @@ edition = "2021"
 dioxus = { version = "0.6.0", features = ["router", "fullstack"] }
 web-sys = "0.3.77"
 chrono = "0.4.41"
+log = "0.4.27"
+uuid = "1.17.0"
 
 [features]
 default = ["web"]

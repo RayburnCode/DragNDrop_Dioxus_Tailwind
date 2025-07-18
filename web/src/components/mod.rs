@@ -8,8 +8,6 @@ pub use hero::Hero;
 mod echo;
 pub use echo::Echo;
 
-mod left_nav;
-pub use left_nav::LeftNav;
 
 mod footer;
 pub use footer::Footer;
@@ -19,3 +17,5 @@ pub use navbar::Navbar;
 
 mod card;
 pub use card::CardGrid;
+
+pub mod left;

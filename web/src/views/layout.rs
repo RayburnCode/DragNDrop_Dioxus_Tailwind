@@ -1,6 +1,7 @@
 use dioxus::prelude::*;
 use crate::Route;
-use crate::components::{Footer, Navbar, LeftNav};
+use crate::components::{Footer, Navbar};
+use crate::components::left::LeftNav;
 
 #[component]
 pub fn AppLayout() -> Element {

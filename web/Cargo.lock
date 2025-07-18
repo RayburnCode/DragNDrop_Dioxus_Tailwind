@@ -4705,6 +4705,8 @@ version = "0.1.0"
 dependencies = [
  "chrono",
  "dioxus",
+ "log",
+ "uuid",
  "web-sys",
 ]
 
