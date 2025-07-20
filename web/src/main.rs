@@ -3,6 +3,7 @@
 use dioxus::prelude::*;
 
 use views::{Blog, Home, DragDropDemo, AppLayout};
+use components::DragDropProvider;
 
 mod components;
 mod views;
@@ -52,8 +53,11 @@ fn App() -> Element {
         document::Link { rel: "icon", href: FAVICON }
         document::Link { rel: "stylesheet", href: TAILWIND_CSS }
 
-        // The router component renders the route enum we defined above. It will handle synchronization of the URL and render
-        // the layouts and components for the active route.
-        Router::<Route> {}
+        // Wrap the entire app with the DragDropProvider for global drag-and-drop functionality
+        DragDropProvider {
+            // The router component renders the route enum we defined above. It will handle synchronization of the URL and render
+            // the layouts and components for the active route.
+            Router::<Route> {}
+        }
     }
 }

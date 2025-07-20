@@ -237,7 +237,7 @@ pub fn LeftNav() -> Element {
                             TemplatesPanel {}
                         },
                         NavSection::Assets => rsx! {
-                            AssetsPanel {}
+                            AssetPanel {}
                         },
                         NavSection::Settings => rsx! {
                             SettingsPanel {}
@@ -245,29 +245,6 @@ pub fn LeftNav() -> Element {
                     }
                 }
             }
-                // Main Content Area (changes based on active section)
-        // div { class: "flex-1 overflow-auto p-6",
-        //     match active_section() {
-        //         NavSection::Blocks => rsx! {
-        //             BlocksPanel {}
-        //         },
-        //         NavSection::PagesLayers => rsx! {
-        //             PagesLayersPanel {}
-        //         },
-        //         NavSection::Styling => rsx! {
-        //             StylingPanel {}
-        //         },
-        //         NavSection::Templates => rsx! {
-        //             TemplatesPanel {}
-        //         },
-        //         NavSection::Assets => rsx! {
-        //             AssetsPanel {}
-        //         },
-        //         NavSection::Settings => rsx! {
-        //             SettingsPanel {}
-        //         },
-        //     }
-        // }
         }
     }
 }
@@ -287,15 +264,7 @@ fn TemplatesPanel() -> Element {
         }
     }
 }
-#[component]
-fn AssetsPanel() -> Element {
-    rsx! {
-        div {
-            h2 { class: "text-xl font-semibold mb-4", "Assets" }
-                // Implementation would go here
-        }
-    }
-}
+
 
 #[component]
 fn SettingsPanel() -> Element {

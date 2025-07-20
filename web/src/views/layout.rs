@@ -1,6 +1,6 @@
 use dioxus::prelude::*;
 use crate::Route;
-use crate::components::{Footer, Navbar};
+use crate::components::{Footer, Navbar, DropZone};
 use crate::components::left::LeftNav;
 
 #[component]
