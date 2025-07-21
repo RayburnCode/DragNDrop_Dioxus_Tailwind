@@ -155,6 +155,16 @@ impl DragDropContext {
         }
     }
 
+    pub fn update_component_name(&self, component_id: &str, new_name: &str) {
+        unsafe {
+            COMPONENTS.with_mut(|components| {
+                if let Some(component) = components.iter_mut().find(|c| c.id == component_id) {
+                    component.name = new_name.to_string();
+                }
+            });
+        }
+    }
+
     pub fn get_components_in_palette(&self) -> Vec<DraggableComponent> {
         unsafe {
             COMPONENTS().into_iter().filter(|c| !c.in_drop_zone).collect()

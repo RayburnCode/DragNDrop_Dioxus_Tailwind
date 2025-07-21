@@ -22,6 +22,6 @@ mod drag_context;
 pub use drag_context::{DragDropContext, DragDropProvider, DraggableComponent, ComponentType, ComponentProperties, use_drag_drop_context};
 
 mod drop_zone;
-pub use drop_zone::{DropZone, DroppedComponent};
+pub use drop_zone::DropZone;
 
 pub mod left;
